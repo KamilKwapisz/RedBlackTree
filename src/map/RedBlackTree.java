@@ -1,3 +1,5 @@
+package map;
+
 public class RedBlackTree<K extends Comparable<K>, V> implements MapInterface<K, V> {
 
     private final int RED = 0;
@@ -225,7 +227,6 @@ public class RedBlackTree<K extends Comparable<K>, V> implements MapInterface<K,
     }
 
     private boolean delete(Node z) {
-//        if ((z = findNode(z, root)) == null) {
         if (z == null) {
             return false;
         }
