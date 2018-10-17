@@ -104,54 +104,6 @@ public class RedBlackTree<K extends Comparable<K>, V> implements MapInterface<K,
         return null;
     }
 
-//    private Node findNode(Node findNode, Node node) {
-//        if (root == nil) {
-//            return null;
-//        }
-//
-//        if (((K) findNode.key).compareTo((K) node.key) < 0) {
-//            if (node.left != nil) {
-//                return findNode(findNode, node.left);
-//            }
-//        } else if (((K) findNode.key).compareTo((K) node.key) > 0) {
-//            if (node.right != nil) {
-//                return findNode(findNode, node.right);
-//            }
-//        } else {
-//            return node;
-//        }
-//        return null;
-//    }
-//    private void insert(Node node) {
-//        Node temp = root;
-//        if (root == nil) {
-//            root = node;
-//            node.color = BLACK;
-//            node.parent = nil;
-//        } else {
-//            node.color = RED;
-//            while (true) {
-//                if (((K) node.key).compareTo((K) temp.key) < 0) {
-//                    if (temp.left == nil) {
-//                        temp.left = node;
-//                        node.parent = temp;
-//                        break;
-//                    } else {
-//                        temp = temp.left;
-//                    }
-//                } else if (((K) node.key).compareTo((K) temp.key) >= 0) {
-//                    if (temp.right == nil) {
-//                        temp.right = node;
-//                        node.parent = temp;
-//                        break;
-//                    } else {
-//                        temp = temp.right;
-//                    }
-//                }
-//            }
-//            fixTree(node);
-//        }
-//    }
     //Takes as argument the newly inserted node
     private void fixTree(Node node) {
         while (node.parent.color == RED) {
