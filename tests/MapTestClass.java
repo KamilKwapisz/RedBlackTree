@@ -25,4 +25,19 @@ public class MapTestClass {
         assertEquals(value2, new Integer(21)); 
         assertEquals(value3, new Integer(-13));
     }
+    
+    @Test
+    public void testGetMethodOnEmptyMap(){
+        RedBlackTree<String, Integer> map = new RedBlackTree<>();
+        assertNull(map.getValue("NotAKey"));
+    }
+    
+    @Test
+    public void testGetMethodWithUnknownKey(){
+        RedBlackTree<String, Integer> map = new RedBlackTree<>();
+        map.setValue("key", Integer.MIN_VALUE);
+        assertNull(map.getValue("NotAKey"));
+    }
+    
+    
 }
