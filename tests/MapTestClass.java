@@ -1,5 +1,4 @@
 import map.RedBlackTree;
-import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
 
@@ -39,5 +38,12 @@ public class MapTestClass {
         assertNull(map.getValue("NotAKey"));
     }
     
+    @Test
+    public void testMapWithDoublesAsKeysAndValues(){
+        RedBlackTree<Double, Double> map = new RedBlackTree<>();
+        map.setValue(17.0, 13.1);
+        Double value = map.getValue(17.0);
+        assertEquals(value, new Double(13.1));
+    }
     
 }
