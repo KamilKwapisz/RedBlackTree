@@ -54,6 +54,7 @@ public class RedBlackTree<K extends Comparable<K>, V> implements MapInterface<K,
             }
             fixTree(node);
         }
+        fixTree(node);
     }
 
     @Override
